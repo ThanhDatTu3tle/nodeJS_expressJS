@@ -1,0 +1,14 @@
+extends ../layouts/common
+
+block navbar 
+
+
+block content
+    h1 Create user 
+
+    form(action="/users/create", method="POST")
+        label Name 
+        input(type="text", name="name")
+
+        button Create
+    
