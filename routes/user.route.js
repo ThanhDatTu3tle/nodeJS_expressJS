@@ -1,7 +1,8 @@
 const express = require('express');
 
 var controller = require('../controllers/user.controller');
- 
+var validate = require('../validate/user.validate');
+
 const router = express.Router();
 
 // request data from resource, localhost:3000/users
@@ -17,6 +18,6 @@ router.get('/create', controller.create);
 router.get('/:id', controller.get);
 
 
-router.post('/create', controller.postCreate);
+router.post('/create', validate.postCreate, controller.postCreate);
 
 module.exports = router;

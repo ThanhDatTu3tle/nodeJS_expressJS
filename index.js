@@ -1,7 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 
 const userRoute = require('./routes/user.route');
+const authRoute = require('./routes/auth.route');
 
 const port = 3000;
 
@@ -11,6 +13,7 @@ app.set('views', './views');
 
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+app.use(cookieParser());
 
 // use static files:
 app.use(express.static('public'));
@@ -21,6 +24,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/users', userRoute);
+app.use('/auth', authRoute);
 
 // start server at port
 app.listen(port, () => {
