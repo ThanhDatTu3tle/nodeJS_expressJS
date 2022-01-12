@@ -12,6 +12,7 @@ app.set('views', './views');
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
+// use static files:
 app.use(express.static('public'));
 
 // Routes, request data from resource, localhost:3000/

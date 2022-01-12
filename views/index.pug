@@ -1,23 +1,4 @@
 extends ./layouts/common
-block navbar
-
-    nav.navbar.navbar-light.bg-light
-        .container-fluid
-            a.navbar-brand(href="/")
-                img.d-inline-block.align-text-top(src='/images/Tu3tle.jpg', alt='', width='30', height='24') 
-
-            .collapse.navbar-collapse
-                ul.navbar-nav
-                    li.nav-item
-                        a.nav-link.active(aria-current='page', href='#') Home
-                    li.nav-item
-                        a.nav-link(href='#') Features
-                    li.nav-item
-                        a.nav-link(href='#') Pricing
-                    li.nav-item
-                        a.nav-link.disabled Disabled
-
-
 block content                  
     h1 Hello #{name}
     a(href="/users") User List 
