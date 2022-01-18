@@ -5,6 +5,7 @@ module.exports.login = (req, res) => {
   res.render('auth/login');
 };
 
+// postLogin
 module.exports.postLogin = (req, res) => {
   var email = req.body.email;
   var password = req.body.password;
@@ -37,4 +38,10 @@ module.exports.postLogin = (req, res) => {
     signed: true
   });
   res.redirect('/users');
+};
+
+// logout
+module.exports.logout = (req, res) => {
+  req.clearCookie;
+  res.redirect('/');
 };

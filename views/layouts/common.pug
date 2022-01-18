@@ -4,7 +4,8 @@ html
         
     body
         nav.navbar.navbar-expand-lg.navbar-light.bg-light
-            a.navbar-brand(href='#') Tu3tle
+            span &nbsp;
+            a.navbar-brand(href='/') Tu3tle
             button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
                 span.navbar-toggler-icon
             #navbarNav.collapse.navbar-collapse
@@ -13,8 +14,15 @@ html
                         a.nav-link(href='/') Home
                     li.nav-item
                         a.nav-link(href='/users') Users
+                    li.nav-item
+                        a.nav-link(href='/products') Products
+
             if user 
-                p= user.name
+                h5= user.name
+                span &nbsp;
+                a.btn.btn-primary(href='/auth/logout') Log out
+                span &nbsp;
+
 
         .container.pt-5
             block content 

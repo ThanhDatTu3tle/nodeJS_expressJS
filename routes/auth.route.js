@@ -4,9 +4,10 @@ const controller = require('../controllers/auth.controller');
 
 const router = express.Router();
 
-// request data from resource, localhost:3000/login
 router.get('/login', controller.login);
 
 router.post('/login', controller.postLogin);
+
+router.get('/logout', controller.logout);
 
 module.exports = router;
