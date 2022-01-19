@@ -1,5 +1,12 @@
 extends ../layouts/common
 
+block account
+    if user 
+        h5= user.name
+        span &nbsp;
+        a.btn.btn-primary(href='/auth/logout') Log out
+        span &nbsp;
+
 block content        
     h1 
         span.mr-3 Users
@@ -14,12 +21,15 @@ block content
 
     table.table 
         tr  
+            th Avatar
             th Name 
             th Phone 
             th Actions
 
         each user in users 
             tr
+                td 
+                    img(src= user.avatar)
                 td= user.name 
                 td= user.phone
                 td 

@@ -17,12 +17,8 @@ html
                     li.nav-item
                         a.nav-link(href='/products') Products
 
-            if user 
-                h5= user.name
-                span &nbsp;
-                a.btn.btn-primary(href='/auth/logout') Log out
-                span &nbsp;
-
-
+            block account
+                
         .container.pt-5
             block content 
+            

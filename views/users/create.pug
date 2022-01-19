@@ -7,7 +7,7 @@ block content
         each error in errors
             .alert.alert-danger= error
 
-    form(action="/users/create", method="POST")
+    form(action="/users/create", method="POST", enctype="multipart/form-data")
         .form-group 
             label(for="name") Name 
             input#name.form-control(type="text", name="name", value=values ? values.name : "")
@@ -17,6 +17,14 @@ block content
             label(for="phone") Phone 
             input#phone.form-control(type="text", name="phone", value=values ? values.phone : "")
             span &nbsp;
+
+        .form-group 
+            label(for="avatar") Avatar 
+            span &nbsp;
+            span &nbsp;
+            input#avatar.form-control-file(type="file", name="avatar")
+            span &nbsp;
             
+
         button.btn.btn-primary Create
     

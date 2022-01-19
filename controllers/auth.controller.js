@@ -42,6 +42,6 @@ module.exports.postLogin = (req, res) => {
 
 // logout
 module.exports.logout = (req, res) => {
-  req.clearCookie;
+  res.clearCookie('userId');
   res.redirect('/');
 };

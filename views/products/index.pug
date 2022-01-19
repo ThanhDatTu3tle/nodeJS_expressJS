@@ -1,13 +1,15 @@
 extends ../layouts/common
 
+block account
+    if user 
+        h5= user.name
+        span &nbsp;
+        a.btn.btn-primary(href='/auth/logout') Log out
+        span &nbsp;
+
 block content        
     h1 
         span.mr-3 Products
-
-    .d-flex.align-items-center
-        form.ml-auto(action="/products", method="GET", class="d-flex")
-            input(type="text", name="q", class="form-control")
-            button(class="btn btn-primary ml-2")  Search
 
     .row.d-flex
         each product in products

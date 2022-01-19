@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
 
 app.use('/users', authMiddleware.requireAuth, userRoute);
 app.use('/auth', authRoute);
-app.use('/products', productRoute);
+app.use('/products', authMiddleware.requireAuth, productRoute);
 
 // start server at port
 app.listen(port, () => {
