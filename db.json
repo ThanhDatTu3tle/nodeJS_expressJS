@@ -5,33 +5,13 @@
       "phone": "0587764127",
       "id": "n4qUkfsqq",
       "email": "thanhdat11badinh@gmail.com",
-      "password": "123456"
+      "password": "123456",
+      "avatar": "uploads\\e6541494ea70643bca8f28a6fdc244c0"
     },
     {
       "name": "Trần Bình An",
       "phone": "0583500133",
       "id": "5T_q6jbit"
-    },
-    {
-      "name": "Nguyễn Thị Mỹ Ngân",
-      "phone": "0397733511",
-      "id": "q9n85f5I0"
-    },
-    {
-      "name": "Khoa Ngu",
-      "phone": "0965330821",
-      "id": "DjIhoth4s"
-    },
-    {
-      "name": "Khoa Can",
-      "phone": "0965330821",
-      "id": "KzuE_GJjJ"
-    },
-    {
-      "name": "Thanh Dat Nguyen",
-      "phone": "0587764127",
-      "id": "mCF3nkw8D",
-      "avatar": ""
     }
   ],
   "products": [
