@@ -40,7 +40,7 @@ app.get('/', (req, res) => {
 app.use('/users', authMiddleware.requireAuth, userRoute);
 app.use('/auth', authRoute);
 app.use('/products', productRoute);
-app.use('/cart', cartRoute);
+app.use('/cart', authMiddleware.requireAuth, cartRoute);
 
 // start server at port
 app.listen(port, () => {

@@ -1,0 +1,25 @@
+extends ../layouts/common
+
+block account
+    if user 
+        h5= user.name
+        span &nbsp;
+        a.btn.btn-primary(href='/auth/logout') Log out
+        span &nbsp;
+        
+
+block content        
+    h1 
+        span.mr-3 Cart 
+    
+    .row.d-flex
+        each product in products
+            .card.col-md-3.ml-5
+                img.card-img-top(src= product.image)
+                .card-body
+                    p.card-text= product.description
+                    
+
+
+
+                        
