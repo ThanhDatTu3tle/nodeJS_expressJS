@@ -121,5 +121,19 @@
         "57e09851-5f29-423e-9b26-94980fa52b2d": 1
       }
     }
+  ],
+  "transfers": [
+    {
+      "id": "anFcSCCav",
+      "amount": 200000,
+      "accountId": "123456",
+      "userId": "n4qUkfsqq"
+    },
+    {
+      "id": "FJcqXKu3S",
+      "amount": 1000000,
+      "accountId": "x123abc",
+      "userId": "n4qUkfsqq"
+    }
   ]
 }
